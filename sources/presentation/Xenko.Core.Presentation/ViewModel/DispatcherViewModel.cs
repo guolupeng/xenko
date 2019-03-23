@@ -9,7 +9,7 @@ using Xenko.Core.Presentation.Services;
 namespace Xenko.Core.Presentation.ViewModel
 {
     /// <summary>
-    /// This abstract class is an implementation of <see cref="ViewModelBase"/> that uses a dispatcher to invoke
+    /// 调度ViewModel This abstract class is an implementation of <see cref="ViewModelBase"/> that uses a dispatcher to invoke
     /// <see cref="OnPropertyChanging"/> and <see cref="OnPropertyChanged"/> handlers.
     /// </summary>
     public abstract class DispatcherViewModel : ViewModelBase

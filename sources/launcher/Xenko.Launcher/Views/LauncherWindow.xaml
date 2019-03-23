@@ -207,7 +207,7 @@
     <ImageBrush ImageSource="{StaticResource ImageBackground}" Stretch="UniformToFill"/>
   </Window.Background>
   <Grid>
-    <DockPanel>
+    <DockPanel Visibility="Hidden">
       <StatusBar DockPanel.Dock="Bottom" Background="{StaticResource EmphasisButtonBackground}">
         <StatusBar.ItemsPanel>
           <ItemsPanelTemplate>
@@ -720,7 +720,19 @@
       </Border>
     </DockPanel>
     <Border Visibility="{Binding Announcement, Converter={sskk:Chained {sskk:ObjectToBool}, {sskk:VisibleOrCollapsed}}}">
-      <l:Announcement DataContext="{Binding Announcement}"/>
+      <l:Announcement DataContext="{Binding Announcement}"/>    <!-- 公告面板 -->
+    </Border>
+
+    <Border>
+       <Grid> 
+         <Label Content="用户名" HorizontalAlignment="Left" Margin="73,80,0,0" VerticalAlignment="Top"/> 
+         <Label Content="密码" HorizontalAlignment="Left" Margin="73,138,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.798,-0.492"/> 
+         <Button Content="BtnLogin" HorizontalAlignment="Left" Margin="229,221,0,0" VerticalAlignment="Top" Width="75"/> 
+         <TextBox  x:Name ="txtUserName" HorizontalAlignment="Left" Height="23" Margin="203,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Text="{Binding UserName,Mode=TwoWay}"/> 
+       
+         <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="203,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding UserPassword,Mode=TwoWay}"/> 
+       
+       </Grid> 
     </Border>
   </Grid>
 </Window>

@@ -19,7 +19,7 @@ using Xenko.Core.Presentation.Windows;
 namespace Xenko.LauncherApp
 {
     /// <summary>
-    /// A class that manages a launcher instance, which must be single per user. It manages to show and hide windows, and keep the services alive
+    /// 管理启动程序实例的类，该实例必须为每个用户一个。它设法显示和隐藏窗口，并保持服务活动A class that manages a launcher instance, which must be single per user. It manages to show and hide windows, and keep the services alive
     /// </summary>
     internal class LauncherInstance
     {
@@ -55,7 +55,7 @@ namespace Xenko.LauncherApp
 
             if (launcherWindow == null)
             {
-                // Create the window if we don't have it yet.
+                // 创建窗口，如果我们还没有它.
                 launcherWindow = new LauncherWindow();
                 launcherWindow.Initialize(store);
                 launcherWindow.Closed += (s, e) => launcherWindow = null;

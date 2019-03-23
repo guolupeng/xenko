@@ -8,7 +8,7 @@ using Microsoft.Win32;
 namespace Xenko.PrivacyPolicy
 {
     /// <summary>
-    /// A helper class to manage Privacy Policy acceptance.
+    /// 用于管理隐私策略接受的helper类 A helper class to manage Privacy Policy acceptance.
     /// </summary>
     internal static class PrivacyPolicyHelper
     {

@@ -334,7 +334,7 @@
     <comment>Verb used in a sentence to indicate that the VSIX can be updated.</comment>
   </data>
   <data name="LauncherTitle" xml:space="preserve">
-    <value>Xenko launcher</value>
+    <value>GLP 启动器</value>
     <comment>Title of the launcher window</comment>
   </data>
   <data name="NoProjectCreated" xml:space="preserve">
@@ -346,15 +346,15 @@
     <comment>Title of this category</comment>
   </data>
   <data name="SelfUpdateExit" xml:space="preserve">
-    <value>Exit</value>
+    <value>退出</value>
     <comment>The cancel button of the self update window. Pressing it exit the application</comment>
   </data>
   <data name="SelfUpdateMessage" xml:space="preserve">
-    <value>A new version of the launcher is being downloaded…</value>
+    <value>一个新的版本的启动程序正在下载…</value>
     <comment>Message of the self-update window</comment>
   </data>
   <data name="SelfUpdateTitle" xml:space="preserve">
-    <value>Updating…</value>
+    <value>更新程序…</value>
     <comment>Title of the self-update window</comment>
   </data>
   <data name="AskSurvey" xml:space="preserve">

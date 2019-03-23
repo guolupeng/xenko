@@ -102,7 +102,7 @@ namespace Xenko.LauncherApp.ViewModels
         public ReleaseNotesViewModel ActiveReleaseNotes { get { return activeReleaseNotes; } set { SetValue(ref activeReleaseNotes, value); } }
 
         public ObservableList<DocumentationPageViewModel> ActiveDocumentationPages => ActiveVersion.Yield().Concat(XenkoVersions).OfType<XenkoStoreVersionViewModel>().FirstOrDefault()?.DocumentationPages;
-
+        //公告
         public AnnouncementViewModel Announcement { get { return announcement; } set { SetValue(ref announcement, value); } }
 
         public bool IsOffline { get { return isOffline; } set { SetValue(ref isOffline, value); } }

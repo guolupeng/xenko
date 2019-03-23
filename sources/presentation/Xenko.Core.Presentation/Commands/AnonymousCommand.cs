@@ -10,7 +10,7 @@ using Xenko.Core.Presentation.ViewModel;
 namespace Xenko.Core.Presentation.Commands
 {
     /// <summary>
-    /// An implementation of <see cref="CommandBase"/> that routes <see cref="Execute"/> calls to a given anonymous method.
+    /// 匿名命令 An implementation of <see cref="CommandBase"/> that routes <see cref="Execute"/> calls to a given anonymous method.
     /// </summary>
     /// <seealso cref="AnonymousCommand{T}"/>
     public class AnonymousCommand : CommandBase

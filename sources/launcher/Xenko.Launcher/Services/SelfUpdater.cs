@@ -23,7 +23,7 @@ namespace Xenko.LauncherApp.Services
 {
     public static class SelfUpdater
     {
-        public static readonly string Version;
+        public static readonly string Version;      //版本
 
         private static SelfUpdateWindow selfUpdateWindow;
 
@@ -31,7 +31,7 @@ namespace Xenko.LauncherApp.Services
         {
             var assembly = Assembly.GetEntryAssembly();
             var assemblyInformationalVersion = assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
-            Version = assemblyInformationalVersion.InformationalVersion;
+            Version = assemblyInformationalVersion.InformationalVersion;        //获取到版本
         }
 
         internal static Task SelfUpdate(IViewModelServiceProvider services, NugetStore store)

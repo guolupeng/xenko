@@ -1,4 +1,4 @@
-﻿// Copyright (c) Xenko contributors (https://xenko.com) and Silicon Studio Corp. (https://www.siliconstudio.co.jp)
+// Copyright (c) Xenko contributors (https://xenko.com) and Silicon Studio Corp. (https://www.siliconstudio.co.jp)
 // Distributed under the MIT license. See the LICENSE.md file in the project root for more information.
 using System;
 using System.ComponentModel;
@@ -36,17 +36,17 @@ namespace Xenko.LauncherApp.Views
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
             var handle = new WindowInteropHelper(this);
-            LauncherViewModel.WindowHandle = handle.Handle;
-
+            LauncherViewModel.WindowHandle = handle.Handle;     //设置LauncherViewModel windows句柄
+            //初始化窗口大小
             InitializeWindowSize();
         }
 
         private void InitializeWindowSize()
-        {
+        {   //窗口大小为当前屏幕大小的一半 居中
             var workArea = this.GetWorkArea();
             Width = Math.Min(Width, workArea.Width);
             Height = Math.Min(Height, workArea.Height);
-            this.CenterToArea(workArea);
+            this.CenterToArea(workArea);       
         }
 
         public bool ExitOnUserClose { get; set; }
@@ -55,9 +55,9 @@ namespace Xenko.LauncherApp.Views
 
         internal void Initialize(NugetStore store, string defaultLogText = null)
         {
-            var dispatcherService = new DispatcherService(Dispatcher);
-            var dialogService = new DialogService(dispatcherService, Launcher.ApplicationName);
-            var serviceProvider = new ViewModelServiceProvider(new object[] {dispatcherService, dialogService});
+            var dispatcherService = new DispatcherService(Dispatcher);      //调度员服务  
+            var dialogService = new DialogService(dispatcherService, Launcher.ApplicationName);     //对话框服务
+            var serviceProvider = new ViewModelServiceProvider(new object[] {dispatcherService, dialogService});        //服务提供者
             DataContext = new LauncherViewModel(serviceProvider, store);
         }
 

@@ -6,7 +6,7 @@ using System.Windows;
 namespace Xenko.LauncherApp.Views
 {
     /// <summary>
-    /// Interaction logic for SelfUpdateWindow.xaml
+    /// SelfUpdateWindow.xaml交互逻辑 Interaction logic for SelfUpdateWindow.xaml
     /// </summary>
     public partial class SelfUpdateWindow
     {
@@ -16,6 +16,7 @@ namespace Xenko.LauncherApp.Views
         public SelfUpdateWindow()
         {
             InitializeComponent();
+
             Width = Math.Min(Width, SystemParameters.WorkArea.Width);
             Height = Math.Min(Height, SystemParameters.WorkArea.Height);
             // Allow closing only when Exit button is enabled.
@@ -23,15 +24,15 @@ namespace Xenko.LauncherApp.Views
         }
 
         /// <summary>
-        /// Prevents window from being closed during a critical section of the update process.
+        /// 防止在更新过程的关键部分关闭窗口 Prevents window from being closed during a critical section of the update process.
         /// </summary>
         public void LockWindow()
         {
             ExitButton.IsEnabled = false;
         }
 
-        /// <summary>
-        /// Forcibly close the update window.
+        /// <summary>   
+        /// 强制关闭更新窗口 Forcibly close the update window.
         /// </summary>
         public void ForceClose()
         {
